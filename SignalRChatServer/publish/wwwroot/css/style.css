@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI',sans-serif;
+    background: #121212;
+    color: #fff;
+}
+
+.dashboard {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.metrics canvas {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.warning.high {
+    color: #e74c3c;
+}
+
+.warning.medium {
+    color: #f1c40f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    background: #333;
+}
+
+.top-metrics p, .network p {
+    margin: 5px 0;
+}
+
+@media(max-width:768px) {
+    .dashboard {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table, th, td {
+        font-size: 0.8rem;
+    }
+}

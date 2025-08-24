@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #fff;
+}
+
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+    .search-bar input {
+        width: 50%;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        font-size: 1rem;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+tbody tr:hover {
+    background: #2c2c2c;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+    .search-bar input {
+        width: 90%;
+    }
+
+    th, td {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}

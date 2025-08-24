@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Messages</title>
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Messages</h1>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by user or message...">
+        </div>
+
+        <table id="messagesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="js/messages.js"></script>
+</body>
+</html>

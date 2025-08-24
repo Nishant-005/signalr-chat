@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Server Dashboard ✅</h1>
+
+        <div class="top-metrics">
+            <p>Uptime: <span id="uptime">0s</span></p>
+            <p>CPU Cores: <span id="cpu-cores">0</span></p>
+            <p>Total RAM: <span id="total-ram">0 MB</span></p>
+        </div>
+
+        <div class="metrics">
+            <p>CPU Usage: <span id="cpu-text">0%</span> <span id="cpu-warning" class="warning"></span></p>
+            <canvas id="cpu-chart" height="120"></canvas>
+
+            <p>RAM Usage: <span id="ram-text">0%</span> <span id="ram-warning" class="warning"></span></p>
+            <canvas id="ram-chart" height="120"></canvas>
+
+            <p>Disk Usage: <span id="disk-text">0%</span></p>
+            <canvas id="disk-chart" height="120"></canvas>
+        </div>
+
+        <div class="network">
+            <p>Network In: <span id="net-in">0 KB/s</span> | Out: <span id="net-out">0 KB/s</span></p>
+        </div>
+
+        <div class="top-processes">
+            <h3>Top 5 Processes</h3>
+            <table id="process-table">
+                <tr><th>Name</th><th>CPU%</th><th>RAM MB</th></tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

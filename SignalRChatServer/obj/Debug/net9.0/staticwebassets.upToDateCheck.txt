@@ -1,0 +1,12 @@
+wwwroot\css\messages.css
+wwwroot\css\style.css
+wwwroot\index.html
+wwwroot\js\messages.js
+wwwroot\js\script.js
+wwwroot\messages.html
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\css\messages.css
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\css\style.css
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\index.html
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\js\messages.js
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\js\script.js
+C:\Users\nisha\source\repos\SignalRChatServer\wwwroot\messages.html
