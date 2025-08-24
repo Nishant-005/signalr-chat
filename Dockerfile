@@ -1,5 +1,5 @@
 # Stage 1: Build the app
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ COPY SignalRChatServer/ ./SignalRChatServer/
 RUN dotnet publish SignalRChatServer/SignalRChatServer.csproj -c Release -o /app/out
 
 # Stage 2: Create runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS runtime
 
 WORKDIR /app
 COPY --from=build /app/out ./
