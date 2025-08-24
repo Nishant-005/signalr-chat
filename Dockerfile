@@ -2,16 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
-# Copy project file(s) and restore dependencies
-# Adjust the path if your .csproj is in a subfolder
-COPY SignalRChatServer/*.csproj ./SignalRChatServer/
-RUN dotnet restore ./SignalRChatServer/*.csproj
+# Copy the project file and restore dependencies
+COPY *.csproj ./
+RUN dotnet restore
 
-# Copy the rest of the files
-COPY SignalRChatServer/. ./SignalRChatServer/
-WORKDIR /app/SignalRChatServer
-
-# Publish the project to /app/publish
+# Copy all other files and publish
+COPY . ./
 RUN dotnet publish -c Release -o /app/publish
 
 # Stage 2: Runtime
@@ -21,5 +17,8 @@ WORKDIR /app
 # Copy published files from build stage
 COPY --from=build /app/publish .
 
-# Set the entrypoint
+# Configure dynamic port for Render
+ENV ASPNETCORE_URLS=http://+:$PORT
+
+# Set entrypoint
 ENTRYPOINT ["dotnet", "SignalRChatServer.dll"]
